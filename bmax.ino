@@ -59,11 +59,12 @@ Serial.println(girarinicio);
   lineadetector2();
   lineadetector1();
   detectearDistancia();
-  if((valorSensorLuz1==1 && valorSensorLuz2==1)&&(distancia>20.00 || distancia==0.00)){
+  detectearDistancia();
+  if((valorSensorLuz1==1 && valorSensorLuz2==1)&&(distancia>25.00 || distancia==0.00)){
       buscar();
       frenar();
       }
-  if(distancia<=20.00 && distancia >0.00){
+  if(distancia<=25.00 && distancia >0.00){
      motorderecho(); 
       }
   //................................................................................  
@@ -73,6 +74,7 @@ Serial.println(girarinicio);
       }
   lineadetector2();
   lineadetector1();
+  detectearDistancia();
   detectearDistancia();
 }
 //final de la funcion que se repite ciclicamente..........
